@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>ReConfig - RTSP Input</title>
+    <link rel="stylesheet" href="model.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-left">
+            <i class="fas fa-bolt"></i> ReConfig
+        </div>
+        <div class="nav-title">Realtime Road Object Classification - Project ReConfig</div>
+        <div class="nav-right">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="menu-item" title="Cam 1"><i class="fas fa-camera"></i> <span>Cameras</span></div>
+        <a href="test_view.html"><div class="menu-item" title="TEST"><i class="fas fa-camera"></i> <span>Test Video</span></div></a>
+
+        </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>YOLO Object Detection Live Feeds</h1>
+
+        <div class = "container">
+            <img src="http://127.0.0.1:8000/video/cam0" width="500" alt="Live Feed">
+            <img src="http://127.0.0.1:8000/video/cam1" width="500" alt="Live Feed">
+            <img src="http://127.0.0.1:8000/video/cam2" width="500" alt="Live Feed">
+
+        </div>
+        <div class="container">
+            <div class="input-container">
+                <span class="label">RTSP</span>
+                <input type="text" placeholder="rtsp://admin:admin@192.168.29.237:1935">
+                <span class="link-icon"><i class="fas fa-link"></i></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

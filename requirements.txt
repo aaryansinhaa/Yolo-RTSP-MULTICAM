@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+opencv-python
+jupyter
+labelImg
+fastapi
+uvicorn
+ultralytics

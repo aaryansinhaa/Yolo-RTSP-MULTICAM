@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>ReConfig</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">ReConfig</div>
+        <a href="web_login.html" class="project-button">Try now</a>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <h1 class="real-time">Real Time</h1>
+        <h1 class="gradient-text">Road-Object Classification</h1>
+        <p>Developed a model for classification of objects on the road into categories <br>(e.g. vehicles, pedestrians, motorcycles, etc.).</p>
+        <p>Actionable insights from pre-deployed security systems.</p>
+        <a href="web_login.html" class="project-button centered-button">Try now</a>
+    </main>
+    <div class="svg-container">
+        <img src="loop.svg" alt="Background Pattern" class="responsive-svg">
+    </div>
+    
+    <!-- Scroll Trigger -->
+    <section class="scroll-trigger"></section>
+
+    <!-- Team Section (Initially Hidden) -->
+    <section class="team-section hidden">
+        <h2>Meet Our Team</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+    
+                <!-- Team Member 1 -->
+                <div class="swiper-slide team-card">
+                    <img src="rahul.jpeg" alt="Rahul">
+                    <h3>Rahul Sharma</h3>
+                    <p>Frontend Developer</p>
+                    <p>Handles model and website design.</p>
+                    <a href="https://www.linkedin.com/in/rahulsharma2k4" target="_blank" class="linkedin-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+    
+                <!-- Team Member 2 -->
+                <div class="swiper-slide team-card">
+                    <img src="aaryan.jpeg" alt="Aaryan Sinha">
+                    <h3>Aaryan Sinha</h3>
+                    <p>Backend Developer</p>
+                    <p>Manages server and model integration.</p>
+                    <a href="https://www.linkedin.com/in/aaryankumarsinha" target="_blank" class="linkedin-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+    
+                <!-- Team Member 3 -->
+                <div class="swiper-slide team-card">
+                    <img src="aishwary.jpeg" alt="Aishwary Raj">
+                    <h3>Aishwary Raj</h3>
+                    <p>UI/UX Designer</p>
+                    <a href="https://www.linkedin.com/in/aishwary-raj-63b434290" target="_blank" class="linkedin-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+    
+            </div>
+            <!-- Pagination and Navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+        
+    <section class="tech-stack">
+        <h2>Tech Stack Used</h2>
+        <div class="stack-container">
+            <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
+            <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV"></div>
+            <div class="stack-item"><img src="ultralytics.png" alt="YOLO"></div>
+            <div class="stack-item"><img src="jinja.png" alt="Jinja2"></div>
+            <div class="stack-item"><img src="https://streamlit.io/images/brand/streamlit-mark-color.png" alt="Streamlit"></div>
+            <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"></div>
+            <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"></div>
+            <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"></div>
+            <div class="stack-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
+        </div>
+    </section>
+    
+    <section class="graph-section">
+        <div class="text-content">
+            <h2>Model Performance Overview</h2>
+            <p><strong>Accuracy:</strong> The YOLO model achieves high precision in object detection, classifying road objects efficiently.</p>
+            <p><strong>Speed:</strong> Real-time processing enables quick identification of vehicles, pedestrians, and obstacles.</p>
+            <p><strong>Scalability:</strong> The model is optimized for deployment on various edge and cloud environments.</p>
+        </div>
+        <div class="graph-container">
+            <img src="Graph.jpg" alt="Performance Graph">
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <h2>Advanced Object Classification</h2>
+        <p class="subtext">
+            A cutting-edge solution for real-time object detection, leveraging YOLO to classify road entities with precision.
+        </p>
+    
+        <div class="feature-container">
+            <div class="feature-card">
+                <h3>Real-Time Detection</h3>
+                <p>Utilizes YOLO's optimized deep learning model for instant recognition of vehicles, pedestrians, and road signs.</p>
+                <div class="code-snippet">
+                    <pre>
+def generate_frames(rtsp_url):
+    """Function to capture RTSP video and apply YOLO object detection."""
+    cap = cv2.VideoCapture(rtsp_url)
+    
+    while cap.isOpened():
+        success, frame = cap.read()
+        if not success:
+            break
+
+        # Run YOLOv11 on Frame
+        results = model(frame)
+
+        # Draw Bounding Boxes
+        for r in results:
+            for box in r.boxes.xyxy:
+                x1, y1, x2, y2 = map(int, box)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+
+        # Encode Frame
+        _, buffer = cv2.imencode('.jpg', frame)
+        frame = buffer.tobytes()
+
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+    cap.release()
+                    </pre>
+                </div>
+            </div>
+    
+            <div class="feature-card">
+                <h3>Edge & Cloud Scalability</h3>
+                <p>Deploy seamlessly on embedded systems, cloud platforms, or local servers for high efficiency.</p>
+                <div class="code-snippet">
+                    <pre>
+import streamlit as st
+import torch
+
+# Feature Card UI
+with st.container():
+    st.markdown("### 🚀 Edge & Cloud Scalability")
+    st.markdown("Deploy seamlessly on embedded systems, cloud platforms,
+     or local servers for high efficiency.")
+
+    # Code Snippet with Syntax Highlighting
+    code = """
+import torch
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+model.to(device)
+    """
+    st.code(code, language="python")
+
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>ReConfig</h3>
+                <p>Developing intelligent road object classification solutions with YOLO and deep learning.</p>
+            </div>
+    
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Tech Stack</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com/Just.sk3chin" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2025 ReConfig. All rights reserved. <br>Crafted with love from IIIT Manipur.</p>
+        </div>
+    </footer>
+    
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize Swiper
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        // Scroll effect to reveal team section
+        document.addEventListener("scroll", function () {
+            let teamSection = document.querySelector(".team-section");
+            let triggerPosition = document.querySelector(".scroll-trigger").getBoundingClientRect().top;
+            let screenHeight = window.innerHeight;
+
+            if (triggerPosition < screenHeight * 0.75) {
+                teamSection.classList.add("show");
+            }
+        });
+    </script>
+
+</body>
+</html>
