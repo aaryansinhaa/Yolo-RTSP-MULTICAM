@@ -22,7 +22,7 @@ A real-time **YOLO Object Detection Dashboard** that allows users to view live v
 ## 🛠️ Tech Stack
 - **Frontend:** HTML, CSS, JavaScipt (Dark Themed UI)
 - **Backend:** Python (FastAPI)
-- **YOLO Model:** YOLOv4 / YOLOv5 for object detection
+- **YOLO Model:** YOLOv11 for object detection
 
 ---
 
